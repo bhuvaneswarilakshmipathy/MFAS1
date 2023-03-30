@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+body, html {
+    height: 100vh;
+    margin: 0;
+    font-family: "Poppings", sans-serif;
+    font-weight: 200;
+}
+body {
+    background-color: #282a36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.digit-group input {
+    width: 50px;
+    height: 70px;
+    background-color: #18182a;
+    border: none;
+    line-height: 50px;
+    text-align: center;
+    font-size: 32px;
+    font-family: "Poppings", sans-serif;
+    font-weight: 200;
+    color: white;
+    margin: 0 2px;
+    outline: none; 
+}
+.digit-group input:focus{
+    border: 2px solid #a527ff;
+    box-shadow: 0 0 2px 2px #a527ff6a;
+}
+.digit-group .splitter {
+    padding: 0 5px;
+    color: white;
+    font-size: 24px;
+}
+.prompt {
+    margin-bottom: 20px;
+    font-size: px;
+    color: white;
+}
+
+ button {
+	 position: absolute;
+	 left: 50%;
+	 top: 50%;
+	 transform: translateX(-50%) translateY(-50%);
+}
+
+button {
+    background: #333;
+    color: #ccc;
+    width: 200px;
+    height: 60px;
+    border: 0;
+    font-size: 18px;
+    border-radius: 4px;
+    font-family: "Raleway", sans-serif;
+    transition: 0.6s;
+    overflow: hidden;
+}
+button:focus {
+    outline: 0;
+}
+button:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
+}
+button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+}
+button:hover {
+    background: #850eb5;
+    cursor: pointer;
+}
+button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 0.6;
+    transition: 0.7s;
+}
+button:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: 0.7s;
+}
+.verify{
+    position: relative;
+    margin-top: 25%;
+}

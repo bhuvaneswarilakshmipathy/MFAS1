@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='/style.css') }}" />
+</head>
+<body>
+    <div class="textt">
+    <h2 style="color: azure;" >The secret code is: 
+        {% for j in lista %}
+          {{ j }}
+        {% endfor %}  
+    </h2>
+    <h3 style="color: aliceblue;">Enter the code:</h3>
+    <form method="POST" action="{{ url_for('login') }}" class="digit-group" data-group-name="digits" data-autosubmit="false" autocomplete="off">
+        <input type="text" id="passw1" name="passw1" data-next="passw2" />
+        <input type="text" id="passw2" name="passw2" data-next="passw3" data-previous="passw1" />
+        <input type="text" id="passw3" name="passw3" data-next="passw4" data-previous="passw2" />
+        <input type="text" id="passw4" name="passw4" data-next="passw5" data-previous="passw3" />
+        <div class="verify"><button type="submit">Verify</button></div>
+    </form>
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{ url_for('static',filename='app.js') }}"></script>
+</body>
+</html>
